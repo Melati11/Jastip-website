@@ -7,7 +7,7 @@ body {
     margin: 0;
 }
 
-.login-box {
+.regist-box {
     background-color: #B1BED2;
     padding: 20px 50px;
     border-radius: 5px;
@@ -51,11 +51,4 @@ button {
 
 button:hover {
     background-color: #0056b3;
-}
-
-.error-message {
-  color: red;
-  font-size: 0.9em;
-  margin-top: 5px;
-  padding: 4px;
 }
