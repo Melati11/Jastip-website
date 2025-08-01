@@ -21,6 +21,7 @@ header {
 
 nav {
   padding: 5px 90px;
+  gap: 50px;
 }
 
 .logo {
@@ -78,30 +79,45 @@ li a:hover {
   padding-left: 150px;
 }
 
-#about .divider {
+.fade-divider {
   color: #4C7097;
   font-size: xx-large;
   margin:  0 auto;
+  opacity: 0;
+  /* transform: translateY(20px); */
+  transition: opacity 1s ease, transform 1s ease;
 }
 
-#about .divider::before,
-#about .divider::after {
+.fade-divider.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-divider::before,
+.fade-divider::after {
   content: "";
   position: absolute;
   top: 50%;
-  width: 550px; /* panjang garis */
+  width: 0; /* panjang garis */
   height: 1px;
   background-color: #4C7097;
+  transition: width 0.8s ease;
 }
 
-#about .divider::before {
+.fade-divider::before {
   right: 100%;
   margin-right: 20px; /* jarak dari teks */
 }
 
-#about .divider::after {
+.fade-divider::after {
   left: 100%;
   margin-left: 20px;
+}
+
+.fade-divider.show::before,
+.fade-divider.show::after {
+  width: 550px;
+  transition-delay: 0.20s;
 }
 
 .bio {
@@ -115,29 +131,45 @@ li a:hover {
   text-align: justify;
 }
 
-.order h2 {
-  font-size: xx-large;
+.fade-order {
   color: #4C7097;
+  font-size: xx-large;
+  margin:  0 auto;
   white-space: nowrap;
+  opacity: 0;
+  /* transform: translateY(20px); */
+  transition: opacity 1s ease, transform 1s ease;
 }
 
-.order h2::before,
-.order h2::after {
+.fade-order.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-order::before,
+.fade-order::after {
   content: "";
   top: 50%;
-  width: 510px; /* panjang garis */
-  height: 1px;
+  width: 0; /* panjang garis */
+  height: 1.6px;
   background-color: #4C7097;
+  transition: width 0.8s ease;
 }
 
-.order h2::before {
+.fade-order::before {
   right: 100%;
   margin-right: 20px; /* jarak dari teks */
 }
 
-.order h2::after {
+.fade-order::after {
   left: 100%;
   margin-left: 20px;
+}
+
+.fade-order.show::before,
+.fade-order.show::after {
+  width: 510px;
+  transition-delay: 0.20s;
 }
 
 .order p {
@@ -150,6 +182,18 @@ li a:hover {
   margin: 0 auto;
   color: #fff;
   line-height: 1.2;
+}
+
+.fade-in {
+  padding-left: 17%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .carousel-inner{
@@ -195,11 +239,11 @@ li a:hover {
 }
 
 #category {
-  padding: 20px 90px;
+  padding: 2px 90px;
 }
 
 #category h2 {
-  padding-top: 50px;
+  padding-top: 20px;
   color: #4C7097;
   font-size: xx-large;
 }
