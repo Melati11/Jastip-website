@@ -4,7 +4,8 @@
 	<title>Simply Shopping | Selamat Datang</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap');
   </style>
@@ -15,7 +16,12 @@
             <div class="logo">
               <i><h1 class="position-relative"><span style="color: #4C7097;">Shopping</span><br>Simply</h1></i>
             </div>
-            <ul class="nav-links d-flex list-unstyled opacity-100">
+
+			<div class="hamburger d-lg-none">
+			   ☰
+			</div>
+
+            <ul class="nav-links list-unstyled opacity-100 mb-0">
               <li><a href="#home" class="text-decoration-none">Home</a></li>
               <li><a href="#about" class="text-decoration-none">About</a></li>
 			  <li><a href="#category" class="text-decoration-none">Category</a></li>
@@ -35,7 +41,7 @@
 		<a href="login.html" class="text-decoration-none" style="color: #fff;">Belanja Sekarang</a>
 	   </div>
 	  </div>
-	   <img src="Gambar/Jastip Online.jpg" alt="Gambar">
+	   <img src="Gambar/Jastip Online.jpg" alt="Gambar" >
 	  </section>
 	</div>
 
@@ -44,13 +50,15 @@
 	 <div class="divider-container d-flex align-items-center justify-content-center" style="padding-top: 50px;">
 	  <h2 class="fade-divider d-flex position-relative ">About us</h2>
 	 </div>
-	 <div class="content d-flex align-items-center mt-3">
-	  <img src="Gambar/property-removebg-preview.png" alt="Gambar">
-	 <div class="bio position-relative">
-	  <p style="font-size: 14px;"><span style="color: #ffffff; font-size: xx-large;">K</span>ami adalah sebuah platform online yang memungkinkan Anda untuk melakukan jasa titip, baik dalam negeri maupun luar negeri. Kami berusaha memberikan solusi bagi mereka yang ingin membeli barang dari luar negeri, tetapi tidak memiliki akses atau kesulitan dalam proses pembelian dan pengiriman. Kami juga membantu para pelancong yang ingin mengirimkan suvenir atau barang belanjaan kepada keluarga dan teman di kampung halaman.
+	 <div class="content position-relative">
+	  <div class="bio-container">
+	   <img src="Gambar/property-removebg-preview.png" alt="Gambar" class="bio-image">
+	 <div class="bio">
+	   <p style="font-size: 14px;"><span style="color: #ffffff; font-size: xx-large;">K</span>ami adalah sebuah platform online yang memungkinkan Anda untuk melakukan jasa titip, baik dalam negeri maupun luar negeri. Kami berusaha memberikan solusi bagi mereka yang ingin membeli barang dari luar negeri, tetapi tidak memiliki akses atau kesulitan dalam proses pembelian dan pengiriman. Kami juga membantu para pelancong yang ingin mengirimkan suvenir atau barang belanjaan kepada keluarga dan teman di kampung halaman.
 		Tim kami terdiri dari orang-orang yang berpengalaman dalam jasa titip, sehingga Anda dapat merasa tenang dan aman saat menggunakan layanan kami. Kami menawarkan biaya jasa yang terjangkau dan transparan, serta proses yang mudah dan cepat.
 		Kami menyadari bahwa kepercayaan dan kepuasan pelanggan adalah yang terpenting bagi kelangsungan bisnis kami. Oleh karena itu, kami berkomitmen untuk memberikan layanan terbaik dan memenuhi kebutuhan pelanggan dengan baik. Kami juga terus berinovasi dan meningkatkan kualitas layanan kami, agar dapat memberikan pengalaman yang lebih baik bagi para pelanggan.
 		Jika Anda memiliki pertanyaan atau ingin menggunakan layanan kami, jangan ragu untuk menghubungi kami melalui halaman kontak. Kami akan dengan senang hati membantu Anda.<br>Terima kasih telah mempercayakan layanan jasa titip kami!</p>
+	 </div>
 	 </div>
 	 </div><br><br><br>
 

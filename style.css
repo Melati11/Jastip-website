@@ -27,12 +27,42 @@ nav {
 .logo {
   font-size: x-large;
   cursor: default;
-  animation: slideRight 1s ease forwards;
+  animation: fadeInOnly 1s ease-out forwards;
 }
 
 .nav-links {
+  display: flex;
   gap: 40px;
   animation: fadeInUp 2s ease forwards;
+}
+
+.hamburger {
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: none;
+}
+
+/* Responsive mode */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .nav-links {
+  position: absolute;
+  top: 92px;
+  right: 0;
+  background-color: #B1BED2;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  display: none;
+  padding: 1rem 0;
+  gap: 1rem;
+  animation: none;
+}
+.nav-links.active {
+  display: flex;
+ }
 }
 
 .nav-links li {
@@ -53,11 +83,16 @@ li a:hover {
 #home img {
   width: 500px;
   padding-right: 20px;
+  animation: slideInLeft 3s ease forwards;
 }
 
 .hero h1 {
   font-size: xx-large;
   animation: fadeInUp 2s ease forwards;
+}
+
+.hero p {
+  animation: fadeInUp 3s ease forwards;
 }
 
 .cta-button  {
@@ -67,10 +102,57 @@ li a:hover {
   background-color: #4C7097;
   border-radius: 10px;
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+  animation: bounceIn 1s ease;
 }
 
 .cta-button:hover {
   background-color: #395471;
+}
+
+@media (max-width: 768px) {
+   #home {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+   #home img {
+    display: none;
+    animation: fadeOut 0.5s ease forwards;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .hero h1,
+  .hero p,
+  #home img {
+    animation: none;
+  }
+   #home .hero p,
+   #home .hero h1,
+   #home .cta-button {
+    /* padding: 40px 20px; */
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+  }
+   .cta-button {
+     display: inline-block;
+     width: 260px;
+     background-color: #4C7097;
+     padding: 5px 16px;
+     border-radius: 10px;
+      /* margin-top: 5px; */
+  }
+   .cta-button:hover {
+      background-color: #395471;
+  }
+   #home .hero h1 {
+    animation-delay: 0.2s;
+   }
+   #home .hero p {
+    animation-delay: 0.5s;
+   }
+   #home .cta-button {
+    animation-delay: 0.8s;
+   }
 }
 
 #about img {
@@ -120,15 +202,62 @@ li a:hover {
   transition-delay: 0.20s;
 }
 
+.bio-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bio-image {
+  position: absolute;
+  z-index: 1;
+  width: 10%;
+  opacity: 0.2;
+  object-fit: contain;
+}
+
 .bio {
-  right: 150px;
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  max-width: 800px;
   color: black;
   animation: fadeInUp 2s ease forwards;
+  background-color: rgba(255, 255, 255, 0.85); /* Optional: agar teks mudah dibaca di atas gambar */
 }
 
 .bio p {
   padding-top: 15px;
   text-align: justify;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .bio-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bio-image {
+    position: static;
+    width: 80%;
+    margin: 0 auto;
+    opacity: 0.4;
+    margin-bottom: 15px;
+  }
+
+  .bio {
+    padding: 15px;
+    max-width: 100%;
+    background-color: transparent;
+  }
+
+  .bio p {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .fade-order {
@@ -305,23 +434,28 @@ button[type="submit"]:hover {
   gap: 100px;
 }
 
-@keyframes slideRight {
-    0% {
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
+@keyframes fadeInOnly {
+   from { opacity: 0; }
+   to { opacity: 1; }
 }
 @keyframes fadeInUp {
-    0% {
-        transform: translate(5px);
-        opacity: 0;
-    }
-    100% {
-        transform: translate(0px);
-        opacity: 1;
-    }
+    0% { transform: translate(5px); opacity: 0; }
+    100% { transform: translate(0px); opacity: 1; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeOut {
+  from { opacity: 1;}
+  to { opacity: 0;}
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes bounceIn {
+  0%   { transform: scale(0.95); opacity: 0; }
+  50%  { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
 }
