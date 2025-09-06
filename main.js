@@ -56,3 +56,32 @@ const appearOrder = new IntersectionObserver((entries) => {
 orders.forEach(order => {
     appearOrder.observe(order);
 });
+
+const form = document.getElementById("search-form")
+const input = document.getElementById("search-input");
+const listObject = document.getElementById("listObject");
+const objects = listObject.getElementsByClassName("object");
+
+form.addEventListener("submit", function(e) {
+     e.preventDefault(); 
+
+    const keyword = input.value.toLowerCase().trim();
+
+    for (let obj of objects) {
+        const text = obj.innerText.toLowerCase();
+
+        if (keyword === "" || text.includes(keyword)) {
+            obj.style.display = "block";
+        } else {
+            obj.style.display = "none";
+        }
+    }
+});
+
+input.addEventListener("input", function() {
+    if (input.value.trim() === "") {
+        for (let obj of objects) {
+            obj.style.display = "block";
+        }
+    }
+});

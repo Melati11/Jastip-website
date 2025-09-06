@@ -54,7 +54,7 @@
 	  <div class="bio-container">
 	   <img src="Gambar/property-removebg-preview.png" alt="Gambar" class="bio-image">
 	 <div class="bio">
-	   <p style="font-size: 14px;"><span style="color: #ffffff; font-size: xx-large;">K</span>ami adalah sebuah platform online yang memungkinkan Anda untuk melakukan jasa titip, baik dalam negeri maupun luar negeri. Kami berusaha memberikan solusi bagi mereka yang ingin membeli barang dari luar negeri, tetapi tidak memiliki akses atau kesulitan dalam proses pembelian dan pengiriman. Kami juga membantu para pelancong yang ingin mengirimkan suvenir atau barang belanjaan kepada keluarga dan teman di kampung halaman.
+	   <p style="font-size: 14px;"><span class="span">K</span>ami adalah sebuah platform online yang memungkinkan Anda untuk melakukan jasa titip, baik dalam negeri maupun luar negeri. Kami berusaha memberikan solusi bagi mereka yang ingin membeli barang dari luar negeri, tetapi tidak memiliki akses atau kesulitan dalam proses pembelian dan pengiriman. Kami juga membantu para pelancong yang ingin mengirimkan suvenir atau barang belanjaan kepada keluarga dan teman di kampung halaman.
 		Tim kami terdiri dari orang-orang yang berpengalaman dalam jasa titip, sehingga Anda dapat merasa tenang dan aman saat menggunakan layanan kami. Kami menawarkan biaya jasa yang terjangkau dan transparan, serta proses yang mudah dan cepat.
 		Kami menyadari bahwa kepercayaan dan kepuasan pelanggan adalah yang terpenting bagi kelangsungan bisnis kami. Oleh karena itu, kami berkomitmen untuk memberikan layanan terbaik dan memenuhi kebutuhan pelanggan dengan baik. Kami juga terus berinovasi dan meningkatkan kualitas layanan kami, agar dapat memberikan pengalaman yang lebih baik bagi para pelanggan.
 		Jika Anda memiliki pertanyaan atau ingin menggunakan layanan kami, jangan ragu untuk menghubungi kami melalui halaman kontak. Kami akan dengan senang hati membantu Anda.<br>Terima kasih telah mempercayakan layanan jasa titip kami!</p>
@@ -125,7 +125,7 @@
 		  <p class="fade-in justify-content-center">8. Setelah barang tiba, cek kondisi barang dan pastikan barang yang diterima sesuai dengan pesanan Anda.</p>
 		</div>
 		</div>
-	</section>
+	</section><br>
 
 	<!-- Category -->
 	<section id="category">
@@ -133,23 +133,23 @@
 		<!-- Search bar -->
         <form class="d-flex" id="search-form" action="/cari" method="GET">
 			<input type="text" id="search-input" name="q" placeholder="Cari...">
-			<button type="submit">Cari</button>
+			<button type="submit" id="button">Cari</button>
 		  </form><br><br><br>
 		<!-- Kategori Produk -->
-		<div class="objects d-flex justify-content-between">
-			<div class="object text-center">
+		<div class="objects justify-content-between" id="listObject">
+			<div class="object text-center" id="group1">
 			  <a href="#"><img src="Gambar/Clothing(1).jpg" alt="Gambar"><br>Pakaian</a>
 			</div>
-			<div class="object text-center">
+			<div class="object text-center" id="group1">
 			  <a href="#"><img src="Gambar/Skincare(1).jpg" alt="Gambar"><br>Skincare</a>
 			</div>
-			<div class="object text-center">
+			<div class="object text-center" id="group2">
 			  <a href="#"><img src="Gambar/Accecories.jpg" alt="Gambar"><br>Accessories</a>
 			</div>
-			<div class="object text-center">
+			<div class="object text-center" id="group2">
 			 <a href="#"><img src="Gambar/Snacks(1).jpg" alt="Gambar"><br>Snack & Drink</a>
 			</div>
-			<div class="object text-center">
+			<div class="object text-center" id="group3">
 			 <a href="#"><img src="Gambar/Medicine(1).jpg" alt="Gambar"><br>Medicine</a>
 			</div>	
 		</div>
@@ -160,41 +160,42 @@
 	  <div class="end d-flex justify-content-between p-5">
 		<div class="head">
 		<i><h1 style="color: white;"><span style="color: #4C7097;">Shopping</span><br>Simply</h1></i>
+		<p style="color: #fff;">Layanan yang memungkinkan seseorang untuk membeli barang atau produk tertentu<br>dari suatu negara atau tempat lain dan mengirimkannya ke alamat yang diinginkan.</p>
 	    </div>
 
         <div class="other d-flex">
 			<div class="method">
 			 <h3 style="color: #4C7097;">Pembayaran</h3>
-		      <a href="https://bri.co.id/" class="text-decoration-none" style="color: #fff;">BRI</a><br>
-			  <a href="https://bankmandiri.co.id/" class="text-decoration-none" style="color: #fff;">Mandiri</a><br>
-			  <a href="https://www.bca.co.id/id" class="text-decoration-none" style="color: #fff;">BCA</a><br>
-			  <a href="https://www.dana.id/" class="text-decoration-none" style="color: #fff;">Dana</a><br>
-			  <a href="https://www.ovo.id/" class="text-decoration-none" style="color: #fff;">Ovo</a><br>
+		      <a href="https://bri.co.id/" class="text-decoration-none">BRI</a><br>
+			  <a href="https://bankmandiri.co.id/" class="text-decoration-none">Mandiri</a><br>
+			  <a href="https://www.bca.co.id/id" class="text-decoration-none">BCA</a><br>
+			  <a href="https://www.dana.id/" class="text-decoration-none">Dana</a><br>
+			  <a href="https://www.ovo.id/" class="text-decoration-none">Ovo</a><br>
 			</div>
 
 			<div class="method">
 			  <h3 style="color: #4C7097;">Other</h3>
-				<a href="#home" class="text-decoration-none" style="color: #fff;">Home</a><br>
-				<a href="#about" class="text-decoration-none" style="color: #fff;">About</a><br>
-				<a href="#category" class="text-decoration-none" style="color: #fff;">Category</a><br>
-				<a href="blog.html" class="text-decoration-none" style="color: #fff;">blog</a><br>
+				<a href="#home" class="text-decoration-none">Home</a><br>
+				<a href="#about" class="text-decoration-none">About</a><br>
+				<a href="#category" class="text-decoration-none">Category</a><br>
+				<a href="blog.html" class="text-decoration-none">blog</a><br>
 			</div>
 
 			<div class="method">
 			 <h3 style="color: #4C7097;">Social Media</h3>
 				<div class="contact">
 					<!-- <img src="Gambar/Instagram.png" alt="Gambar"> -->
-					<a href="https://www.instagram.com/" class="text-decoration-none" style="color: #fff;">Instagram</a>
+					<a href="https://www.instagram.com/" class="text-decoration-none">Instagram</a>
 				</div>
 
 				<div class="contact">
 					<!-- <img src="Gambar/Twitter.png" alt="Gambar"> -->
-					<a href="https://www.twitter.com/" class="text-decoration-none" style="color: #fff;">Twitter</a>
+					<a href="https://www.twitter.com/" class="text-decoration-none">Twitter</a>
 				</div>
 
 				<div class="contact">
 					<!-- <img src="Gambar/Whatsapp.png" alt="Gambar"> -->
-					<a href="https://www.whatsapp.com/" class="text-decoration-none" style="color: #fff;">Whatsapp</a>
+					<a href="https://www.whatsapp.com/" class="text-decoration-none">Whatsapp</a>
 				</div>
 			</div>
 		  </div>

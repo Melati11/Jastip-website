@@ -49,7 +49,7 @@ nav {
   }
   .nav-links {
   position: absolute;
-  top: 92px;
+  top: 88px;
   right: 0;
   background-color: #B1BED2;
   flex-direction: column;
@@ -202,30 +202,34 @@ li a:hover {
   transition-delay: 0.20s;
 }
 
+.content {
+ display: flex;
+ margin: 0 auto;
+ justify-content: center;
+}
+
 .bio-container {
   position: relative;
   width: 100%;
-  display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .bio-image {
   position: absolute;
-  z-index: 1;
-  width: 10%;
-  opacity: 0.2;
-  object-fit: contain;
+  max-width: 35%;
+  opacity: 1;
 }
 
 .bio {
   position: relative;
   z-index: 2;
+  justify-content: center;
+  margin: 0 auto;
   padding: 20px;
   max-width: 800px;
   color: black;
   animation: fadeInUp 2s ease forwards;
-  background-color: rgba(255, 255, 255, 0.85); /* Optional: agar teks mudah dibaca di atas gambar */
 }
 
 .bio p {
@@ -234,20 +238,25 @@ li a:hover {
   line-height: 1.7;
 }
 
+.span {
+  color: #ffffff; 
+  font-size: xx-large;
+}
+
 @media (max-width: 768px) {
   .bio-container {
+    position: relative;
+    display: flex;
     flex-direction: column;
     text-align: center;
+    justify-content: center;
   }
-
   .bio-image {
-    position: static;
-    width: 80%;
-    margin: 0 auto;
+    position: absolute;
+    max-width: 120%;
+    right: 22px;
     opacity: 0.4;
-    margin-bottom: 15px;
   }
-
   .bio {
     padding: 15px;
     max-width: 100%;
@@ -257,6 +266,9 @@ li a:hover {
   .bio p {
     width: 100%;
     padding: 0;
+  }
+  .span {
+    color: #4C7097;
   }
 }
 
@@ -314,9 +326,11 @@ li a:hover {
 }
 
 .fade-in {
-  padding-left: 17%;
+  padding: 0 20%;
   opacity: 0;
   transform: translateY(20px);
+  justify-content: center;
+  text-align: justify;
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
@@ -324,6 +338,10 @@ li a:hover {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* @media (max-width: 768px) {
+  
+} */
 
 .carousel-inner{
    margin: 0 auto;
@@ -402,12 +420,45 @@ button[type="submit"]:hover {
   background-color: #395471;
 }
 
+@media (max-width: 768px) {
+  #search-form {
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+
+#search-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex-grow: 1;
+}
+
+button[type="submit"] {
+  background-color: #4C7097;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #395471;
+ }
+}
+
 .objects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 30px;
 }
 
 .object img {
-  width: 200px;
+  width: 100%;   /*ikut lebar grid cell
+  /* height: auto;   */
+  object-fit: cover; 
+  /* width: 200px; */
   border-radius: 10px;
 }
 
@@ -419,6 +470,24 @@ button[type="submit"]:hover {
  font-weight: 600;
 }
 
+@media (max-width: 992px) {
+  .objects {
+    grid-template-columns: repeat(3, 1fr);
+ }
+}
+
+@media (max-width: 600px) {
+  .objects {
+    grid-template-columns: repeat(2, 1fr);
+ }
+}
+
+@media (max-width: 400px) {
+  .objects {
+    grid-template-columns: 1fr;
+ }
+}
+
 .footer {
   width: 100%;
   background-color: #B1BED2;
@@ -426,12 +495,40 @@ button[type="submit"]:hover {
   flex-wrap: wrap;
 }
 
+.method a {
+  color: #fff;
+}
+
+.method a:hover{
+  color: #395471;
+}
+
 .end {
   gap: 40px;
 }
 
 .other {
-  gap: 100px;
+  gap: 70px;
+}
+
+@media (max-width: 768px) {
+  .head{
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .head p {
+    text-align: justify;
+  }
+
+  .end {
+    flex-direction: column;
+  }
+
+  .other {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 @keyframes fadeInOnly {
