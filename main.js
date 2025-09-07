@@ -85,3 +85,19 @@ input.addEventListener("input", function() {
         }
     }
 });
+
+// pengen klo blm login, button belaja sekarang mengarah ke page login dulu 
+// terus langsung ke page categori.
+// tapi kalo udh login, button belanja sekarang langsung mengarah ke page kategori 
+
+document.addEventListener('DOMContentLoaded', function() {
+    const belanjaBtn = document.getElementById('belanjaBtn');
+    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+  if (isLoggedIn) {
+    belanjaBtn.href = "#category";
+  } else {
+    const currentPage = window.location.pathname + "#category";
+    belanjaBtn.href = "/login.html?redirect=" + encodeURIComponent(currentPage);
+}
+});

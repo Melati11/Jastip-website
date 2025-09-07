@@ -12,7 +12,8 @@ body {
     padding: 20px 50px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     text-align: center;
 }
 
@@ -51,4 +52,38 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+#registForm a{
+    text-decoration: none;
+    color: #4C7097;
+}
+
+@media (max-width: 768px) {
+  .regist-box {
+    background-color: #B1BED2;
+    padding: 20px 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+    input[type="email"],
+    input[type="text"],
+    input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+    button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4C7097;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
 }

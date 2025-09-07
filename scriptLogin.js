@@ -23,10 +23,15 @@ document.addEventListener('DOMContentLoaded', function () {
     // Jika login berhasil
     errorBox.textContent = ''; // Hapus pesan error jika ada
     localStorage.setItem('isLoggedIn', 'true');
-    window.location.href = 'index.html';
+
+    const params = new URLSearchParams(window.location.search);
+    const redirectURL = params.get(`redirect`) || `index.html`;
+
+    window.location.href = redirectURL;
   });
 
   function showError(message) {
     errorBox.textContent = message;
   }
 });
+

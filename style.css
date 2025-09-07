@@ -455,10 +455,10 @@ button[type="submit"]:hover {
 }
 
 .object img {
-  width: 100%;   /*ikut lebar grid cell
-  /* height: auto;   */
+  width: 100%;   /*ikut lebar grid cell*/
+  max-width: 200px; 
+  height: auto;  
   object-fit: cover; 
-  /* width: 200px; */
   border-radius: 10px;
 }
 
